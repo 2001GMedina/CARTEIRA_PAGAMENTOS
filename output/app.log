@@ -1,0 +1,734 @@
+2025-11-28 10:54:41 [INFO] - Iniciando processo de mailing_usabilidade
+2025-11-28 10:54:41 [INFO] - .env carregado (se existente).
+2025-11-28 10:54:41 [INFO] - Configurações básicas validadas com sucesso.
+2025-11-28 10:54:41 [INFO] - Lendo arquivo SQL em: sql\mailing_usabilidade.sql
+2025-11-28 10:54:41 [INFO] - Conectando ao SQL Server...
+2025-11-28 10:54:43 [INFO] - Conexão com SQL Server estabelecida.
+2025-11-28 10:54:43 [INFO] - Executando consulta mailing_usabilidade...
+2025-11-28 10:54:45 [INFO] - Conexão com SQL Server fechada.
+2025-11-28 10:54:45 [INFO] - Consulta retornou 3904 registros.
+2025-11-28 10:54:45 [INFO] - Colunas retornadas: ['TIPO', 'ID', 'DATA_INICIO_PLANO', 'DATA_NASCIMENTO', 'IDADE', 'FAIXA_ETARIA', 'NOME', 'GENERO', 'TELEFONE', 'CPF', 'EMAIL', 'CEP', 'BAIRRO', 'CIDADE', 'STATUS', 'FORMA_PAGAMENTO', 'PLANO', 'TEMPO_DE_CASA', 'DESCONTO_VALOR', 'TIPO_CONTRATO']
+2025-11-28 10:54:45 [INFO] - Autenticando no Google Sheets...
+2025-11-28 10:54:45 [INFO] - Autenticação no Google Sheets realizada com sucesso.
+2025-11-28 10:54:45 [INFO] - Limpando aba 'MAILING_USABILIDADE' na planilha...
+2025-11-28 10:54:46 [ERROR] - Erro durante a execução: 
+Traceback (most recent call last):
+  File "C:\Users\gabri\Downloads\MAILING_USABILIDADE\venv\Lib\site-packages\gspread\client.py", line 168, in open_by_key
+    spreadsheet = Spreadsheet(self.http_client, {"id": key})
+  File "C:\Users\gabri\Downloads\MAILING_USABILIDADE\venv\Lib\site-packages\gspread\spreadsheet.py", line 29, in __init__
+    metadata = self.fetch_sheet_metadata()
+  File "C:\Users\gabri\Downloads\MAILING_USABILIDADE\venv\Lib\site-packages\gspread\spreadsheet.py", line 230, in fetch_sheet_metadata
+    return self.client.fetch_sheet_metadata(self.id, params=params)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gabri\Downloads\MAILING_USABILIDADE\venv\Lib\site-packages\gspread\http_client.py", line 305, in fetch_sheet_metadata
+    r = self.request("get", url, params=params)
+  File "C:\Users\gabri\Downloads\MAILING_USABILIDADE\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [403]: The caller does not have permission
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\gabri\Downloads\MAILING_USABILIDADE\main.py", line 126, in main
+    clear_worksheet(client, sheet_url, WORKSHEET_NAME)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gabri\Downloads\MAILING_USABILIDADE\mods\google_sheets.py", line 30, in clear_worksheet
+    spreadsheet = client.open_by_url(url)
+  File "C:\Users\gabri\Downloads\MAILING_USABILIDADE\venv\Lib\site-packages\gspread\client.py", line 189, in open_by_url
+    return self.open_by_key(extract_id_from_url(url))
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gabri\Downloads\MAILING_USABILIDADE\venv\Lib\site-packages\gspread\client.py", line 173, in open_by_key
+    raise PermissionError from ex
+PermissionError
+2025-11-28 10:56:29 [INFO] - Iniciando processo de mailing_usabilidade
+2025-11-28 10:56:29 [INFO] - .env carregado (se existente).
+2025-11-28 10:56:29 [INFO] - Configurações básicas validadas com sucesso.
+2025-11-28 10:56:29 [INFO] - Lendo arquivo SQL em: sql\mailing_usabilidade.sql
+2025-11-28 10:56:29 [INFO] - Conectando ao SQL Server...
+2025-11-28 10:56:31 [INFO] - Conexão com SQL Server estabelecida.
+2025-11-28 10:56:31 [INFO] - Executando consulta mailing_usabilidade...
+2025-11-28 10:56:33 [INFO] - Conexão com SQL Server fechada.
+2025-11-28 10:56:33 [INFO] - Consulta retornou 3904 registros.
+2025-11-28 10:56:33 [INFO] - Colunas retornadas: ['TIPO', 'ID', 'DATA_INICIO_PLANO', 'DATA_NASCIMENTO', 'IDADE', 'FAIXA_ETARIA', 'NOME', 'GENERO', 'TELEFONE', 'CPF', 'EMAIL', 'CEP', 'BAIRRO', 'CIDADE', 'STATUS', 'FORMA_PAGAMENTO', 'PLANO', 'TEMPO_DE_CASA', 'DESCONTO_VALOR', 'TIPO_CONTRATO']
+2025-11-28 10:56:33 [INFO] - Autenticando no Google Sheets...
+2025-11-28 10:56:33 [INFO] - Autenticação no Google Sheets realizada com sucesso.
+2025-11-28 10:56:33 [INFO] - Limpando aba 'MAILING_USABILIDADE' na planilha...
+2025-11-28 10:56:35 [INFO] - Aba limpa com sucesso.
+2025-11-28 10:56:35 [INFO] - Enviando dados para o Google Sheets...
+2025-11-28 10:56:37 [INFO] - Dados inseridos na planilha com sucesso!
+2025-11-28 11:07:52 [INFO] - Iniciando processo de mailing_usabilidade
+2025-11-28 11:07:52 [INFO] - .env carregado (se existente).
+2025-11-28 11:07:52 [INFO] - Configurações básicas validadas com sucesso.
+2025-11-28 11:07:52 [INFO] - Lendo arquivo SQL em: sql\mailing_usabilidade.sql
+2025-11-28 11:07:52 [INFO] - Conectando ao SQL Server...
+2025-11-28 11:07:54 [INFO] - Conexão com SQL Server estabelecida.
+2025-11-28 11:07:54 [INFO] - Executando consulta mailing_usabilidade...
+2025-11-28 11:07:56 [INFO] - Conexão com SQL Server fechada.
+2025-11-28 11:07:56 [INFO] - Consulta retornou 3910 registros.
+2025-11-28 11:07:56 [INFO] - Colunas retornadas: ['TIPO', 'ID', 'DATA_INICIO_PLANO', 'DATA_NASCIMENTO', 'IDADE', 'FAIXA_ETARIA', 'NOME', 'GENERO', 'TELEFONE', 'CPF', 'EMAIL', 'CEP', 'BAIRRO', 'CIDADE', 'STATUS', 'FORMA_PAGAMENTO', 'PLANO', 'TEMPO_DE_CASA', 'DESCONTO_VALOR', 'TIPO_CONTRATO']
+2025-11-28 11:07:56 [INFO] - Autenticando no Google Sheets...
+2025-11-28 11:07:56 [INFO] - Autenticação no Google Sheets realizada com sucesso.
+2025-11-28 11:07:56 [INFO] - Limpando aba 'MAILING_USABILIDADE' na planilha...
+2025-11-28 11:07:58 [INFO] - Aba limpa com sucesso.
+2025-11-28 11:07:58 [INFO] - Enviando dados para o Google Sheets...
+2025-11-28 11:08:01 [INFO] - Dados inseridos na planilha com sucesso!
+2025-11-28 11:18:38 [INFO] - Iniciando processo de mailing_usabilidade
+2025-11-28 11:18:38 [INFO] - .env carregado (se existente).
+2025-11-28 11:18:38 [INFO] - Configurações básicas validadas com sucesso.
+2025-11-28 11:18:38 [INFO] - Lendo arquivo SQL em: sql\mailing_usabilidade.sql
+2025-11-28 11:18:38 [INFO] - Conectando ao SQL Server...
+2025-11-28 11:18:40 [INFO] - Conexão com SQL Server estabelecida.
+2025-11-28 11:18:40 [INFO] - Executando consulta mailing_usabilidade...
+2025-11-28 11:18:42 [INFO] - Conexão com SQL Server fechada.
+2025-11-28 11:18:42 [INFO] - Consulta retornou 3923 registros.
+2025-11-28 11:18:42 [INFO] - Colunas retornadas: ['TIPO', 'ID', 'DATA_INICIO_PLANO', 'DATA_NASCIMENTO', 'IDADE', 'FAIXA_ETARIA', 'NOME', 'GENERO', 'TELEFONE', 'CPF', 'EMAIL', 'CEP', 'BAIRRO', 'CIDADE', 'STATUS', 'FORMA_PAGAMENTO', 'PLANO', 'TEMPO_DE_CASA', 'DESCONTO_VALOR', 'TIPO_CONTRATO', 'USO']
+2025-11-28 11:18:42 [INFO] - Autenticando no Google Sheets...
+2025-11-28 11:18:42 [INFO] - Autenticação no Google Sheets realizada com sucesso.
+2025-11-28 11:18:42 [INFO] - Limpando aba 'MAILING_USABILIDADE' na planilha...
+2025-11-28 11:18:44 [INFO] - Aba limpa com sucesso.
+2025-11-28 11:18:44 [INFO] - Enviando dados para o Google Sheets...
+2025-11-28 11:18:46 [INFO] - Dados inseridos na planilha com sucesso!
+2025-11-28 12:07:41 [INFO] - Iniciando processo de mailing_usabilidade
+2025-11-28 12:07:41 [INFO] - .env carregado (se existente).
+2025-11-28 12:07:41 [INFO] - Configurações básicas validadas com sucesso.
+2025-11-28 12:07:41 [INFO] - Lendo arquivo SQL em: sql\mailing_usabilidade.sql
+2025-11-28 12:07:41 [INFO] - Conectando ao SQL Server...
+2025-11-28 12:07:43 [INFO] - Conexão com SQL Server estabelecida.
+2025-11-28 12:07:43 [INFO] - Executando consulta mailing_usabilidade...
+2025-11-28 12:07:46 [INFO] - Conexão com SQL Server fechada.
+2025-11-28 12:07:46 [INFO] - Consulta retornou 3936 registros.
+2025-11-28 12:07:46 [INFO] - Colunas retornadas: ['TIPO', 'ID', 'DATA_INICIO_PLANO', 'DATA_NASCIMENTO', 'IDADE', 'FAIXA_ETARIA', 'NOME', 'GENERO', 'TELEFONE', 'CPF', 'EMAIL', 'CEP', 'BAIRRO', 'CIDADE', 'STATUS', 'FORMA_PAGAMENTO', 'PLANO', 'TEMPO_DE_CASA', 'DESCONTO_VALOR', 'TIPO_CONTRATO', 'USO']
+2025-11-28 12:07:46 [INFO] - Autenticando no Google Sheets...
+2025-11-28 12:07:46 [INFO] - Autenticação no Google Sheets realizada com sucesso.
+2025-11-28 12:07:46 [INFO] - Limpando aba 'MAILING_USABILIDADE' na planilha...
+2025-11-28 12:07:48 [INFO] - Aba limpa com sucesso.
+2025-11-28 12:07:48 [INFO] - Enviando dados para o Google Sheets...
+2025-11-28 12:07:50 [INFO] - Dados inseridos na planilha com sucesso!
+2025-11-28 12:13:34 [INFO] - Iniciando processo de mailing_usabilidade
+2025-11-28 12:13:34 [INFO] - .env carregado (se existente).
+2025-11-28 12:13:34 [INFO] - Configurações básicas validadas com sucesso.
+2025-11-28 12:13:34 [INFO] - Lendo arquivo SQL em: sql\mailing_usabilidade.sql
+2025-11-28 12:13:34 [INFO] - Conectando ao SQL Server...
+2025-11-28 12:13:36 [INFO] - Conexão com SQL Server estabelecida.
+2025-11-28 12:13:36 [INFO] - Executando consulta mailing_usabilidade...
+2025-11-28 12:13:38 [INFO] - Conexão com SQL Server fechada.
+2025-11-28 12:13:38 [INFO] - Consulta retornou 3936 registros.
+2025-11-28 12:13:38 [INFO] - Colunas retornadas: ['TIPO', 'ID', 'DATA_INICIO_PLANO', 'DATA_NASCIMENTO', 'IDADE', 'FAIXA_ETARIA', 'NOME', 'GENERO', 'TELEFONE', 'CPF', 'EMAIL', 'CEP', 'BAIRRO', 'CIDADE', 'STATUS', 'FORMA_PAGAMENTO', 'PLANO', 'TEMPO_DE_CASA', 'DESCONTO_VALOR', 'TIPO_CONTRATO', 'USO']
+2025-11-28 12:13:38 [INFO] - Autenticando no Google Sheets...
+2025-11-28 12:13:38 [INFO] - Autenticação no Google Sheets realizada com sucesso.
+2025-11-28 12:13:38 [INFO] - Limpando aba 'MAILING_USABILIDADE' na planilha...
+2025-11-28 12:13:40 [INFO] - Aba limpa com sucesso.
+2025-11-28 12:13:40 [INFO] - Enviando dados para o Google Sheets...
+2025-11-28 12:13:43 [INFO] - Dados inseridos na planilha com sucesso!
+2025-11-28 12:21:27 [INFO] - Iniciando processo de mailing_usabilidade
+2025-11-28 12:21:27 [INFO] - .env carregado (se existente).
+2025-11-28 12:21:27 [INFO] - Configurações básicas validadas com sucesso.
+2025-11-28 12:21:27 [INFO] - Lendo arquivo SQL em: sql\mailing_usabilidade.sql
+2025-11-28 12:21:27 [INFO] - Conectando ao SQL Server...
+2025-11-28 12:21:29 [INFO] - Conexão com SQL Server estabelecida.
+2025-11-28 12:21:29 [INFO] - Executando consulta mailing_usabilidade...
+2025-11-28 12:21:32 [INFO] - Conexão com SQL Server fechada.
+2025-11-28 12:21:32 [INFO] - Formatando campos de data (DATA_INICIO_PLANO, DATA_NASCIMENTO).
+2025-11-28 12:21:32 [INFO] - Formatando campo DESCONTO_VALOR para usar vírgula.
+2025-11-28 12:21:32 [INFO] - Tratando valores ausentes (NaN) nas demais colunas.
+2025-11-28 12:21:32 [INFO] - Consulta retornou 3936 registros.
+2025-11-28 12:21:32 [INFO] - Colunas retornadas: ['TIPO', 'ID', 'DATA_INICIO_PLANO', 'DATA_NASCIMENTO', 'IDADE', 'FAIXA_ETARIA', 'NOME', 'GENERO', 'TELEFONE', 'CPF', 'EMAIL', 'CEP', 'BAIRRO', 'CIDADE', 'STATUS', 'FORMA_PAGAMENTO', 'PLANO', 'TEMPO_DE_CASA', 'DESCONTO_VALOR', 'TIPO_CONTRATO', 'USO']
+2025-11-28 12:21:32 [INFO] - Autenticando no Google Sheets...
+2025-11-28 12:21:32 [INFO] - Autenticação no Google Sheets realizada com sucesso.
+2025-11-28 12:21:32 [INFO] - Limpando aba 'MAILING_USABILIDADE' na planilha...
+2025-11-28 12:21:34 [INFO] - Aba limpa com sucesso.
+2025-11-28 12:21:34 [INFO] - Enviando dados para o Google Sheets...
+2025-11-28 12:21:36 [INFO] - Dados inseridos na planilha com sucesso!
+2026-01-09 11:04:18 [INFO] - \U0001f680 Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-09 11:04:18 [INFO] - \U0001f50c Conectando ao CRM
+2026-01-09 11:04:20 [INFO] - \U0001f4c4 Executando query
+2026-01-09 11:04:22 [INFO] - \U0001f4ca Linhas retornadas: 1405
+2026-01-09 11:04:22 [INFO] - \U0001f512 Conexão CRM encerrada
+2026-01-09 11:04:22 [INFO] - \U0001f50c Conectando ao DW
+2026-01-09 11:04:24 [INFO] - \U0001f4e5 Inserindo dados na tabela CARTEIRA_PAGAMENTOS
+2026-01-09 11:08:31 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-09 11:08:31 [INFO] - Conectando ao CRM
+2026-01-09 11:08:33 [INFO] - Executando query (schema dbo)
+2026-01-09 11:08:34 [INFO] - Linhas retornadas: 1405
+2026-01-09 11:08:34 [INFO] - Conexão CRM encerrada
+2026-01-09 11:08:34 [INFO] - Conectando ao DW
+2026-01-09 11:08:36 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-09 11:12:11 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-09 11:12:11 [INFO] - Conectando ao CRM
+2026-01-09 11:12:13 [INFO] - Executando query (schema dbo)
+2026-01-09 11:12:14 [INFO] - Linhas retornadas: 1405
+2026-01-09 11:12:15 [INFO] - Conexão CRM encerrada
+2026-01-09 11:12:15 [INFO] - Conectando ao DW
+2026-01-09 11:12:16 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-09 11:18:06 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-09 11:18:06 [INFO] - Conectando ao CRM
+2026-01-09 11:18:08 [INFO] - Executando query (schema dbo)
+2026-01-09 11:18:09 [INFO] - Linhas retornadas: 1405
+2026-01-09 11:18:10 [INFO] - Conexão CRM encerrada
+2026-01-09 11:18:10 [INFO] - Conectando ao DW
+2026-01-09 11:18:11 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-09 11:26:56 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-09 11:26:56 [INFO] - Conectando ao CRM
+2026-01-09 11:26:58 [INFO] - Executando query (schema dbo)
+2026-01-09 11:26:59 [INFO] - Linhas retornadas: 1405
+2026-01-09 11:27:00 [INFO] - Conexão CRM encerrada
+2026-01-09 11:27:00 [INFO] - Conectando ao DW
+2026-01-09 11:27:01 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-09 11:31:33 [INFO] - Carga finalizada com sucesso
+2026-01-09 12:18:33 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-09 12:18:33 [INFO] - Conectando ao CRM
+2026-01-09 12:18:35 [INFO] - Executando query
+2026-01-09 12:18:36 [INFO] - Linhas retornadas: 1405
+2026-01-09 12:18:36 [INFO] - Conexão CRM encerrada
+2026-01-09 12:18:36 [INFO] - Sanitizando dados
+2026-01-09 12:18:36 [INFO] - Conectando ao DW
+2026-01-09 12:18:38 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-09 12:22:23 [ERROR] - Erro durante inserção no DW
+Traceback (most recent call last):
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 105, in main
+    insert_dataframe(dw_conn, df, target_schema, target_table)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 44, in insert_dataframe
+    cursor.executemany(
+    ~~~~~~~~~~~~~~~~~~^
+        insert_sql,
+        ^^^^^^^^^^^
+        df.itertuples(index=False, name=None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pyodbc.ProgrammingError: ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter 14 (""): The supplied value is not a valid instance of data type float. Check the source data for invalid values. An example of an invalid value is data of numeric type with scale greater than precision. (8023) (SQLExecDirectW)')
+2026-01-09 12:22:23 [INFO] - Conexão DW encerrada
+2026-01-09 12:29:30 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-09 12:29:30 [INFO] - Conectando ao CRM
+2026-01-09 12:29:32 [INFO] - Executando query
+2026-01-09 12:29:33 [INFO] - Linhas retornadas: 1405
+2026-01-09 12:29:34 [INFO] - Conexão CRM encerrada
+2026-01-09 12:29:34 [INFO] - Sanitizando dados
+2026-01-09 12:29:34 [INFO] - Conectando ao DW
+2026-01-09 12:29:35 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-09 12:29:36 [ERROR] - Erro durante inserção no DW
+Traceback (most recent call last):
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 106, in main
+    insert_dataframe(dw_conn, df, target_schema, target_table)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 45, in insert_dataframe
+    cursor.executemany(
+    ~~~~~~~~~~~~~~~~~~^
+        insert_sql,
+        ^^^^^^^^^^^
+        df.itertuples(index=False, name=None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pyodbc.ProgrammingError: ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter 5 (""): The supplied value is not a valid instance of data type float. Check the source data for invalid values. An example of an invalid value is data of numeric type with scale greater than precision. (8023) (SQLExecDirectW)')
+2026-01-09 12:29:36 [INFO] - Conexão DW encerrada
+2026-01-09 12:31:46 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-09 12:31:46 [INFO] - Conectando ao CRM
+2026-01-09 12:31:48 [INFO] - Executando query
+2026-01-09 12:31:49 [INFO] - Linhas retornadas: 1405
+2026-01-09 12:31:49 [INFO] - Conexão CRM encerrada
+2026-01-09 12:31:49 [INFO] - Sanitizando dados
+2026-01-09 12:31:50 [INFO] - Conectando ao DW
+2026-01-09 12:31:51 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-09 12:31:51 [ERROR] - Erro durante inserção no DW
+Traceback (most recent call last):
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 106, in main
+    insert_dataframe(dw_conn, df, target_schema, target_table)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 45, in insert_dataframe
+    cursor.executemany(
+    ~~~~~~~~~~~~~~~~~~^
+        insert_sql,
+        ^^^^^^^^^^^
+        df.itertuples(index=False, name=None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pyodbc.ProgrammingError: ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter 5 (""): The supplied value is not a valid instance of data type float. Check the source data for invalid values. An example of an invalid value is data of numeric type with scale greater than precision. (8023) (SQLExecDirectW)')
+2026-01-09 12:31:51 [INFO] - Conexão DW encerrada
+2026-01-13 11:39:09 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-13 11:39:09 [INFO] - Conectando ao CRM
+2026-01-13 11:39:11 [INFO] - Executando query
+2026-01-13 11:39:12 [INFO] - Linhas retornadas: 1391
+2026-01-13 11:39:12 [INFO] - Conexão CRM encerrada
+2026-01-13 11:39:12 [INFO] - Sanitizando dados
+2026-01-13 11:39:12 [INFO] - Conectando ao DW
+2026-01-13 11:39:14 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-13 11:39:14 [ERROR] - Erro durante inserção no DW
+Traceback (most recent call last):
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 106, in main
+    insert_dataframe(dw_conn, df, target_schema, target_table)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 45, in insert_dataframe
+    cursor.executemany(
+    ~~~~~~~~~~~~~~~~~~^
+        insert_sql,
+        ^^^^^^^^^^^
+        df.itertuples(index=False, name=None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pyodbc.ProgrammingError: ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter 5 (""): The supplied value is not a valid instance of data type float. Check the source data for invalid values. An example of an invalid value is data of numeric type with scale greater than precision. (8023) (SQLExecDirectW)')
+2026-01-13 11:39:14 [INFO] - Conexão DW encerrada
+2026-01-13 12:18:34 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-13 12:18:34 [INFO] - Conectando ao CRM
+2026-01-13 12:18:36 [INFO] - Executando query
+2026-01-13 12:18:38 [INFO] - Linhas retornadas: 1391
+2026-01-13 12:18:38 [INFO] - Conexão CRM encerrada
+2026-01-13 12:18:38 [INFO] - Sanitizando dados
+2026-01-13 12:18:38 [INFO] - Conectando ao DW
+2026-01-13 12:18:40 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-13 12:22:30 [ERROR] - Erro durante inserção no DW
+Traceback (most recent call last):
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 118, in main
+    insert_dataframe(dw_conn, df, target_schema, target_table)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 57, in insert_dataframe
+    cursor.executemany(
+    ~~~~~~~~~~~~~~~~~~^
+        insert_sql,
+        ^^^^^^^^^^^
+        df.itertuples(index=False, name=None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pyodbc.ProgrammingError: ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter 14 (""): The supplied value is not a valid instance of data type float. Check the source data for invalid values. An example of an invalid value is data of numeric type with scale greater than precision. (8023) (SQLExecDirectW)')
+2026-01-13 12:22:30 [INFO] - Conexão DW encerrada
+2026-01-13 12:31:15 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-13 12:31:15 [INFO] - Conectando ao CRM
+2026-01-13 12:31:16 [INFO] - Executando query
+2026-01-13 12:31:17 [INFO] - Linhas retornadas: 1391
+2026-01-13 12:31:18 [INFO] - Conexão CRM encerrada
+2026-01-13 12:31:18 [INFO] - Sanitizando dados
+2026-01-13 12:31:18 [INFO] - Conectando ao DW
+2026-01-13 12:31:20 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-13 12:35:01 [ERROR] - Erro durante inserção no DW
+Traceback (most recent call last):
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 120, in main
+    insert_dataframe(dw_conn, df, target_schema, target_table)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 59, in insert_dataframe
+    cursor.executemany(
+    ~~~~~~~~~~~~~~~~~~^
+        insert_sql,
+        ^^^^^^^^^^^
+        df.itertuples(index=False, name=None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pyodbc.ProgrammingError: ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter 14 (""): The supplied value is not a valid instance of data type float. Check the source data for invalid values. An example of an invalid value is data of numeric type with scale greater than precision. (8023) (SQLExecDirectW)')
+2026-01-13 12:35:01 [INFO] - Conexão DW encerrada
+2026-01-14 04:56:39 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-14 04:56:39 [INFO] - Conectando ao CRM
+2026-01-14 04:56:42 [INFO] - Executando query
+2026-01-14 04:56:43 [INFO] - Linhas retornadas: 1393
+2026-01-14 04:56:43 [INFO] - Conexão CRM encerrada
+2026-01-14 04:56:43 [INFO] - Sanitizando dados
+2026-01-14 04:56:43 [INFO] - Conectando ao DW
+2026-01-14 04:56:45 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-14 05:00:54 [ERROR] - Erro durante inserção no DW
+Traceback (most recent call last):
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 120, in main
+    insert_dataframe(dw_conn, df, target_schema, target_table)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 59, in insert_dataframe
+    cursor.executemany(
+    ~~~~~~~~~~~~~~~~~~^
+        insert_sql,
+        ^^^^^^^^^^^
+        df.itertuples(index=False, name=None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pyodbc.ProgrammingError: ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter 14 (""): The supplied value is not a valid instance of data type float. Check the source data for invalid values. An example of an invalid value is data of numeric type with scale greater than precision. (8023) (SQLExecDirectW)')
+2026-01-14 05:00:54 [INFO] - Conexão DW encerrada
+2026-01-14 05:23:51 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-14 05:23:51 [INFO] - Conectando ao CRM
+2026-01-14 05:23:53 [INFO] - Executando query
+2026-01-14 05:23:54 [INFO] - Linhas retornadas: 1393
+2026-01-14 05:23:54 [INFO] - Conexão CRM encerrada
+2026-01-14 05:23:54 [INFO] - Sanitizando dados
+2026-01-14 05:23:54 [INFO] - Conectando ao DW
+2026-01-14 05:23:56 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-14 05:27:52 [ERROR] - Erro durante inserção no DW
+Traceback (most recent call last):
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 120, in main
+    insert_dataframe(dw_conn, df, target_schema, target_table)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 59, in insert_dataframe
+    cursor.executemany(
+    ~~~~~~~~~~~~~~~~~~^
+        insert_sql,
+        ^^^^^^^^^^^
+        df.itertuples(index=False, name=None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pyodbc.ProgrammingError: ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter 14 (""): The supplied value is not a valid instance of data type float. Check the source data for invalid values. An example of an invalid value is data of numeric type with scale greater than precision. (8023) (SQLExecDirectW)')
+2026-01-14 05:27:52 [INFO] - Conexão DW encerrada
+2026-01-14 05:30:29 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-14 05:30:29 [INFO] - Conectando ao CRM
+2026-01-14 05:30:31 [INFO] - Executando query
+2026-01-14 05:30:32 [INFO] - Linhas retornadas: 1393
+2026-01-14 05:30:32 [INFO] - Conexão CRM encerrada
+2026-01-14 05:30:32 [INFO] - Sanitizando dados
+2026-01-14 05:30:32 [INFO] - Conectando ao DW
+2026-01-14 05:30:34 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-14 05:34:34 [ERROR] - Erro durante inserção no DW
+Traceback (most recent call last):
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 119, in main
+    insert_dataframe(dw_conn, df, target_schema, target_table)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 58, in insert_dataframe
+    cursor.executemany(
+    ~~~~~~~~~~~~~~~~~~^
+        insert_sql,
+        ^^^^^^^^^^^
+        df.itertuples(index=False, name=None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pyodbc.ProgrammingError: ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter 14 (""): The supplied value is not a valid instance of data type float. Check the source data for invalid values. An example of an invalid value is data of numeric type with scale greater than precision. (8023) (SQLExecDirectW)')
+2026-01-14 05:34:34 [INFO] - Conexão DW encerrada
+2026-01-14 05:45:01 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-14 05:45:01 [INFO] - Conectando ao CRM
+2026-01-14 05:45:03 [INFO] - Executando query no CRM
+2026-01-14 05:45:04 [INFO] - Linhas retornadas: 1393
+2026-01-14 05:45:05 [INFO] - Conexão CRM encerrada
+2026-01-14 05:45:05 [INFO] - Sanitizando dados
+2026-01-14 05:45:05 [INFO] - Preview dos dados (5 primeiras linhas):
+2026-01-14 05:45:05 [INFO] -                  DATA_INT    FORMA_PAGAMENTO  SC_ID STATUS      ID       DATA_INICIO_PLANO                              NOME          CPF  ATIVO            DATA_CRIACAO  DIA_VENCIMENTO_BOLETO DATA_VENCIMENTO  VALOR_MENSALIDADE STATUS_PAG
+0 2026-01-14 05:45:01.927  Cartão de Crédito      3  Ativo  153440 2021-04-01 12:08:57.497  SOLANGE TERESINHA COLARES ABBADE  54046530006   True 2022-05-12 00:00:00.000                    0.0      2026-01-01              779.0       PAGO
+1 2026-01-14 05:45:01.927  Cartão de Crédito      3  Ativo  158957 2023-12-01 00:00:00.000                 DAGOBERTO DE MELO  14846373053   True 2022-05-12 00:00:00.000                   15.0      2026-01-01              699.0       PAGO
+2 2026-01-14 05:45:01.927  Cartão de Crédito      3  Ativo  179771 2023-03-01 03:00:00.000           TANIA MARA GODOY PRESA   88119106091   True 2023-03-01 09:52:10.717                   20.0      2026-01-01              699.0       PAGO
+3 2026-01-14 05:45:01.927  Cartão de Crédito      3  Ativo  180598 2023-08-01 03:00:00.000           DANIELA RANGEL DE SOUZA  99880563034   True 2023-08-01 16:06:13.357                   10.0      2026-01-01              699.0       PAGO
+4 2026-01-14 05:45:01.927  Cartão de Crédito      3  Ativo  181165 2023-11-01 03:00:00.000        DAIANE BARTHOLOMEUS CAMPOS  94287872053   True 2023-10-27 11:18:49.577                   20.0      2026-01-01              699.0       PAGO
+2026-01-14 05:45:05 [INFO] - Tipos da coluna VALOR_MENSALIDADE:
+2026-01-14 05:45:05 [INFO] - VALOR_MENSALIDADE
+<class 'float'>    1393
+2026-01-14 05:45:05 [INFO] - Estatísticas VALOR_MENSALIDADE:
+2026-01-14 05:45:05 [INFO] - count    1393.000000
+mean      789.226849
+std       168.157135
+min       299.000000
+25%       699.000000
+50%       749.000000
+75%       899.000000
+max      1349.000000
+2026-01-14 05:45:05 [INFO] - Conectando ao DW
+2026-01-14 05:45:06 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-14 05:49:03 [ERROR] - Erro durante inserção no DW
+Traceback (most recent call last):
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 146, in main
+    insert_dataframe(dw_conn, df, target_schema, target_table)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 62, in insert_dataframe
+    cursor.executemany(
+    ~~~~~~~~~~~~~~~~~~^
+        insert_sql,
+        ^^^^^^^^^^^
+        df.itertuples(index=False, name=None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pyodbc.ProgrammingError: ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter 14 (""): The supplied value is not a valid instance of data type float. Check the source data for invalid values. An example of an invalid value is data of numeric type with scale greater than precision. (8023) (SQLExecDirectW)')
+2026-01-14 05:49:03 [INFO] - Conexão DW encerrada
+2026-01-14 05:53:51 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-14 05:53:51 [INFO] - Conectando ao CRM
+2026-01-14 05:53:53 [INFO] - Executando query no CRM
+2026-01-14 05:53:54 [INFO] - Linhas retornadas: 1393
+2026-01-14 05:53:54 [INFO] - Conexão CRM encerrada
+2026-01-14 05:53:54 [INFO] - Sanitizando dados
+2026-01-14 06:06:22 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-14 06:06:22 [INFO] - Conectando ao CRM
+2026-01-14 06:06:24 [INFO] - Executando query no CRM
+2026-01-14 06:06:25 [INFO] - Linhas retornadas: 1393
+2026-01-14 06:06:25 [INFO] - Conexão CRM encerrada
+2026-01-14 06:06:25 [INFO] - Sanitizando dados
+2026-01-14 06:06:25 [INFO] - Preview dos dados (5 primeiras linhas):
+2026-01-14 06:06:25 [INFO] -                  DATA_INT    FORMA_PAGAMENTO  SC_ID STATUS      ID       DATA_INICIO_PLANO                              NOME          CPF  ATIVO            DATA_CRIACAO DIA_VENCIMENTO_BOLETO DATA_VENCIMENTO  VALOR_MENSALIDADE STATUS_PAG
+0 2026-01-14 06:06:22.507  Cartão de Crédito      3  Ativo  153440 2021-04-01 12:08:57.497  SOLANGE TERESINHA COLARES ABBADE  54046530006   True 2022-05-12 00:00:00.000                     0      2026-01-01              779.0       PAGO
+1 2026-01-14 06:06:22.507  Cartão de Crédito      3  Ativo  158957 2023-12-01 00:00:00.000                 DAGOBERTO DE MELO  14846373053   True 2022-05-12 00:00:00.000                    15      2026-01-01              699.0       PAGO
+2 2026-01-14 06:06:22.507  Cartão de Crédito      3  Ativo  179771 2023-03-01 03:00:00.000           TANIA MARA GODOY PRESA   88119106091   True 2023-03-01 09:52:10.717                    20      2026-01-01              699.0       PAGO
+3 2026-01-14 06:06:22.507  Cartão de Crédito      3  Ativo  180598 2023-08-01 03:00:00.000           DANIELA RANGEL DE SOUZA  99880563034   True 2023-08-01 16:06:13.357                    10      2026-01-01              699.0       PAGO
+4 2026-01-14 06:06:22.507  Cartão de Crédito      3  Ativo  181165 2023-11-01 03:00:00.000        DAIANE BARTHOLOMEUS CAMPOS  94287872053   True 2023-10-27 11:18:49.577                    20      2026-01-01              699.0       PAGO
+2026-01-14 06:06:25 [INFO] - Tipos da coluna VALOR_MENSALIDADE:
+2026-01-14 06:06:25 [INFO] - VALOR_MENSALIDADE
+<class 'float'>    1393
+2026-01-14 06:06:25 [INFO] - Estatísticas VALOR_MENSALIDADE:
+2026-01-14 06:06:25 [INFO] - count    1393.000000
+mean      789.226849
+std       168.157135
+min       299.000000
+25%       699.000000
+50%       749.000000
+75%       899.000000
+max      1349.000000
+2026-01-14 06:06:25 [INFO] - Conectando ao DW
+2026-01-14 06:06:28 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-14 06:11:18 [ERROR] - Erro durante inserção no DW
+Traceback (most recent call last):
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 160, in main
+    insert_dataframe(dw_conn, df, target_schema, target_table)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 76, in insert_dataframe
+    cursor.executemany(
+    ~~~~~~~~~~~~~~~~~~^
+        insert_sql,
+        ^^^^^^^^^^^
+        df.itertuples(index=False, name=None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pyodbc.ProgrammingError: ('Invalid parameter type.  param-index=10 param-type=NAType', 'HY105')
+2026-01-14 06:11:18 [INFO] - Conexão DW encerrada
+2026-01-14 06:12:48 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-14 06:12:48 [INFO] - Conectando ao CRM
+2026-01-14 06:12:50 [INFO] - Executando query no CRM
+2026-01-14 06:12:52 [INFO] - Linhas retornadas: 1393
+2026-01-14 06:12:52 [INFO] - Conexão CRM encerrada
+2026-01-14 06:12:52 [INFO] - Sanitizando dados
+2026-01-14 06:12:52 [INFO] - Preview dos dados (5 primeiras linhas):
+2026-01-14 06:12:52 [INFO] -                  DATA_INT    FORMA_PAGAMENTO  SC_ID STATUS      ID       DATA_INICIO_PLANO                              NOME          CPF  ATIVO            DATA_CRIACAO DIA_VENCIMENTO_BOLETO DATA_VENCIMENTO  VALOR_MENSALIDADE STATUS_PAG
+0 2026-01-14 06:12:49.270  Cartão de Crédito      3  Ativo  153440 2021-04-01 12:08:57.497  SOLANGE TERESINHA COLARES ABBADE  54046530006   True 2022-05-12 00:00:00.000                     0      2026-01-01              779.0       PAGO
+1 2026-01-14 06:12:49.270  Cartão de Crédito      3  Ativo  158957 2023-12-01 00:00:00.000                 DAGOBERTO DE MELO  14846373053   True 2022-05-12 00:00:00.000                    15      2026-01-01              699.0       PAGO
+2 2026-01-14 06:12:49.270  Cartão de Crédito      3  Ativo  179771 2023-03-01 03:00:00.000           TANIA MARA GODOY PRESA   88119106091   True 2023-03-01 09:52:10.717                    20      2026-01-01              699.0       PAGO
+3 2026-01-14 06:12:49.270  Cartão de Crédito      3  Ativo  180598 2023-08-01 03:00:00.000           DANIELA RANGEL DE SOUZA  99880563034   True 2023-08-01 16:06:13.357                    10      2026-01-01              699.0       PAGO
+4 2026-01-14 06:12:49.270  Cartão de Crédito      3  Ativo  181165 2023-11-01 03:00:00.000        DAIANE BARTHOLOMEUS CAMPOS  94287872053   True 2023-10-27 11:18:49.577                    20      2026-01-01              699.0       PAGO
+2026-01-14 06:12:52 [INFO] - Tipos da coluna VALOR_MENSALIDADE:
+2026-01-14 06:12:52 [INFO] - VALOR_MENSALIDADE
+<class 'float'>    1393
+2026-01-14 06:12:52 [INFO] - Estatísticas VALOR_MENSALIDADE:
+2026-01-14 06:12:52 [INFO] - count    1393.000000
+mean      789.226849
+std       168.157135
+min       299.000000
+25%       699.000000
+50%       749.000000
+75%       899.000000
+max      1349.000000
+2026-01-14 06:12:52 [INFO] - Conectando ao DW
+2026-01-14 06:12:54 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-14 06:16:56 [ERROR] - Erro durante inserção no DW
+Traceback (most recent call last):
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 160, in main
+    insert_dataframe(dw_conn, df, target_schema, target_table)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gabri\Downloads\CARTEIRA_PAGAMENTOS\main.py", line 76, in insert_dataframe
+    cursor.executemany(
+    ~~~~~~~~~~~~~~~~~~^
+        insert_sql,
+        ^^^^^^^^^^^
+        df.itertuples(index=False, name=None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pyodbc.ProgrammingError: ('Invalid parameter type.  param-index=10 param-type=NAType', 'HY105')
+2026-01-14 06:16:56 [INFO] - Conexão DW encerrada
+2026-01-14 06:21:57 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-14 06:21:57 [INFO] - Conectando ao CRM
+2026-01-14 06:21:59 [INFO] - Executando query no CRM
+2026-01-14 06:22:00 [INFO] - Linhas retornadas: 1393
+2026-01-14 06:22:01 [INFO] - Conexão CRM encerrada
+2026-01-14 06:22:01 [INFO] - Sanitizando dados
+2026-01-14 06:22:01 [INFO] - Preview dos dados (5 primeiras linhas):
+2026-01-14 06:22:01 [INFO] -                      DATA_INT    FORMA_PAGAMENTO SC_ID STATUS      ID           DATA_INICIO_PLANO                              NOME          CPF ATIVO                DATA_CRIACAO DIA_VENCIMENTO_BOLETO DATA_VENCIMENTO VALOR_MENSALIDADE STATUS_PAG
+0  2026-01-14 06:21:57.887000  Cartão de Crédito     3  Ativo  153440  2021-04-01 12:08:57.497000  SOLANGE TERESINHA COLARES ABBADE  54046530006  True         2022-05-12 00:00:00                     0      2026-01-01             779.0       PAGO
+1  2026-01-14 06:21:57.887000  Cartão de Crédito     3  Ativo  158957         2023-12-01 00:00:00                 DAGOBERTO DE MELO  14846373053  True         2022-05-12 00:00:00                    15      2026-01-01             699.0       PAGO
+2  2026-01-14 06:21:57.887000  Cartão de Crédito     3  Ativo  179771         2023-03-01 03:00:00           TANIA MARA GODOY PRESA   88119106091  True  2023-03-01 09:52:10.717000                    20      2026-01-01             699.0       PAGO
+3  2026-01-14 06:21:57.887000  Cartão de Crédito     3  Ativo  180598         2023-08-01 03:00:00           DANIELA RANGEL DE SOUZA  99880563034  True  2023-08-01 16:06:13.357000                    10      2026-01-01             699.0       PAGO
+4  2026-01-14 06:21:57.887000  Cartão de Crédito     3  Ativo  181165         2023-11-01 03:00:00        DAIANE BARTHOLOMEUS CAMPOS  94287872053  True  2023-10-27 11:18:49.577000                    20      2026-01-01             699.0       PAGO
+2026-01-14 06:22:01 [INFO] - Tipos da coluna VALOR_MENSALIDADE:
+2026-01-14 06:22:01 [INFO] - VALOR_MENSALIDADE
+<class 'float'>    1393
+2026-01-14 06:22:01 [INFO] - Estatísticas VALOR_MENSALIDADE:
+2026-01-14 06:22:01 [INFO] - count     1393.0
+unique      30.0
+top        699.0
+freq       495.0
+2026-01-14 06:22:01 [INFO] - Conectando ao DW
+2026-01-14 06:22:03 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-14 06:26:50 [INFO] - 1393 linhas inseridas com sucesso
+2026-01-14 06:26:50 [INFO] - Conexão DW encerrada
+2026-01-14 06:26:50 [INFO] - Carga finalizada com sucesso
+2026-01-14 16:42:32 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-14 16:42:32 [INFO] - Conectando ao CRM
+2026-01-14 16:42:34 [INFO] - Executando query no CRM
+2026-01-14 16:42:36 [INFO] - Linhas retornadas: 1393
+2026-01-14 16:42:36 [INFO] - Conexão CRM encerrada
+2026-01-14 16:42:36 [INFO] - Sanitizando dados
+2026-01-14 16:42:36 [INFO] - Preview dos dados (5 primeiras linhas):
+2026-01-14 16:42:36 [INFO] -                      DATA_INT    FORMA_PAGAMENTO SC_ID STATUS      ID           DATA_INICIO_PLANO                              NOME          CPF ATIVO                DATA_CRIACAO DIA_VENCIMENTO_BOLETO DATA_VENCIMENTO VALOR_MENSALIDADE STATUS_PAG
+0  2026-01-14 16:42:31.967000  Cartão de Crédito     3  Ativo  153440  2021-04-01 12:08:57.497000  SOLANGE TERESINHA COLARES ABBADE  54046530006  True         2022-05-12 00:00:00                     0      2026-01-01             779.0       PAGO
+1  2026-01-14 16:42:31.967000  Cartão de Crédito     3  Ativo  158957         2023-12-01 00:00:00                 DAGOBERTO DE MELO  14846373053  True         2022-05-12 00:00:00                    15      2026-01-01             699.0       PAGO
+2  2026-01-14 16:42:31.967000  Cartão de Crédito     3  Ativo  179771         2023-03-01 03:00:00           TANIA MARA GODOY PRESA   88119106091  True  2023-03-01 09:52:10.717000                    20      2026-01-01             699.0       PAGO
+3  2026-01-14 16:42:31.967000  Cartão de Crédito     3  Ativo  180598         2023-08-01 03:00:00           DANIELA RANGEL DE SOUZA  99880563034  True  2023-08-01 16:06:13.357000                    10      2026-01-01             699.0       PAGO
+4  2026-01-14 16:42:31.967000  Cartão de Crédito     3  Ativo  181165         2023-11-01 03:00:00        DAIANE BARTHOLOMEUS CAMPOS  94287872053  True  2023-10-27 11:18:49.577000                    20      2026-01-01             699.0       PAGO
+2026-01-14 16:42:36 [INFO] - Tipos da coluna VALOR_MENSALIDADE:
+2026-01-14 16:42:36 [INFO] - VALOR_MENSALIDADE
+<class 'float'>    1393
+2026-01-14 16:42:36 [INFO] - Estatísticas VALOR_MENSALIDADE:
+2026-01-14 16:42:36 [INFO] - count     1393.0
+unique      30.0
+top        699.0
+freq       494.0
+2026-01-14 16:42:36 [INFO] - Conectando ao DW
+2026-01-14 16:42:38 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-14 16:43:03 [INFO] - Conexão DW encerrada
+2026-01-14 16:46:42 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-14 16:46:42 [INFO] - Conectando ao CRM
+2026-01-14 16:46:43 [INFO] - Executando query no CRM
+2026-01-14 16:46:45 [INFO] - Linhas retornadas: 1393
+2026-01-14 16:46:45 [INFO] - Conexão CRM encerrada
+2026-01-14 16:46:45 [INFO] - Sanitizando dados
+2026-01-14 16:48:28 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-14 16:48:28 [INFO] - Conectando ao CRM
+2026-01-14 16:48:30 [INFO] - Executando query no CRM
+2026-01-14 16:48:31 [INFO] - Linhas retornadas: 1393
+2026-01-14 16:48:31 [INFO] - Conexão CRM encerrada
+2026-01-14 16:48:31 [INFO] - Sanitizando dados
+2026-01-14 16:48:31 [INFO] - Preview dos dados (5 primeiras linhas):
+2026-01-14 16:48:31 [INFO] -                      DATA_INT    FORMA_PAGAMENTO SC_ID STATUS      ID           DATA_INICIO_PLANO                              NOME          CPF ATIVO                DATA_CRIACAO DIA_VENCIMENTO_BOLETO DATA_VENCIMENTO VALOR_MENSALIDADE STATUS_PAG
+0  2026-01-14 16:48:27.577000  Cartão de Crédito     3  Ativo  153440  2021-04-01 12:08:57.497000  SOLANGE TERESINHA COLARES ABBADE  54046530006  True         2022-05-12 00:00:00                     0      2026-01-01              0.78       PAGO
+1  2026-01-14 16:48:27.577000  Cartão de Crédito     3  Ativo  158957         2023-12-01 00:00:00                 DAGOBERTO DE MELO  14846373053  True         2022-05-12 00:00:00                    15      2026-01-01               0.7       PAGO
+2  2026-01-14 16:48:27.577000  Cartão de Crédito     3  Ativo  179771         2023-03-01 03:00:00           TANIA MARA GODOY PRESA   88119106091  True  2023-03-01 09:52:10.717000                    20      2026-01-01               0.7       PAGO
+3  2026-01-14 16:48:27.577000  Cartão de Crédito     3  Ativo  180598         2023-08-01 03:00:00           DANIELA RANGEL DE SOUZA  99880563034  True  2023-08-01 16:06:13.357000                    10      2026-01-01               0.7       PAGO
+4  2026-01-14 16:48:27.577000  Cartão de Crédito     3  Ativo  181165         2023-11-01 03:00:00        DAIANE BARTHOLOMEUS CAMPOS  94287872053  True  2023-10-27 11:18:49.577000                    20      2026-01-01               0.7       PAGO
+2026-01-14 16:48:31 [INFO] - Tipos VALOR_MENSALIDADE:
+2026-01-14 16:48:31 [INFO] - VALOR_MENSALIDADE
+<class 'float'>    1393
+2026-01-14 16:48:31 [INFO] - Estatísticas VALOR_MENSALIDADE:
+2026-01-14 16:48:31 [INFO] - count     1393.0
+unique      30.0
+top          0.7
+freq       494.0
+2026-01-14 16:48:31 [INFO] - Conectando ao DW
+2026-01-14 16:48:33 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-14 16:50:59 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-14 16:50:59 [INFO] - Conectando ao CRM
+2026-01-14 16:51:01 [INFO] - Executando query no CRM
+2026-01-14 16:51:02 [INFO] - Linhas retornadas: 1393
+2026-01-14 16:51:03 [INFO] - Conexão CRM encerrada
+2026-01-14 16:51:03 [INFO] - Sanitizando dados
+2026-01-14 16:51:03 [INFO] - Preview dos dados (5 primeiras linhas):
+2026-01-14 16:51:03 [INFO] -                      DATA_INT    FORMA_PAGAMENTO SC_ID STATUS      ID           DATA_INICIO_PLANO                              NOME          CPF ATIVO                DATA_CRIACAO DIA_VENCIMENTO_BOLETO DATA_VENCIMENTO VALOR_MENSALIDADE STATUS_PAG
+0  2026-01-14 16:50:59.067000  Cartão de Crédito     3  Ativo  153440  2021-04-01 12:08:57.497000  SOLANGE TERESINHA COLARES ABBADE  54046530006  True         2022-05-12 00:00:00                     0      2026-01-01              0.78       PAGO
+1  2026-01-14 16:50:59.067000  Cartão de Crédito     3  Ativo  158957         2023-12-01 00:00:00                 DAGOBERTO DE MELO  14846373053  True         2022-05-12 00:00:00                    15      2026-01-01               0.7       PAGO
+2  2026-01-14 16:50:59.067000  Cartão de Crédito     3  Ativo  179771         2023-03-01 03:00:00           TANIA MARA GODOY PRESA   88119106091  True  2023-03-01 09:52:10.717000                    20      2026-01-01               0.7       PAGO
+3  2026-01-14 16:50:59.067000  Cartão de Crédito     3  Ativo  180598         2023-08-01 03:00:00           DANIELA RANGEL DE SOUZA  99880563034  True  2023-08-01 16:06:13.357000                    10      2026-01-01               0.7       PAGO
+4  2026-01-14 16:50:59.067000  Cartão de Crédito     3  Ativo  181165         2023-11-01 03:00:00        DAIANE BARTHOLOMEUS CAMPOS  94287872053  True  2023-10-27 11:18:49.577000                    20      2026-01-01               0.7       PAGO
+2026-01-14 16:51:03 [INFO] - Tipos VALOR_MENSALIDADE:
+2026-01-14 16:51:03 [INFO] - VALOR_MENSALIDADE
+<class 'float'>    1393
+2026-01-14 16:51:03 [INFO] - Estatísticas VALOR_MENSALIDADE:
+2026-01-14 16:51:03 [INFO] - count     1393.0
+unique      30.0
+top          0.7
+freq       494.0
+2026-01-14 16:51:03 [INFO] - Conectando ao DW
+2026-01-14 16:51:04 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-14 16:53:10 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-14 16:53:10 [INFO] - Conectando ao CRM
+2026-01-14 16:53:12 [INFO] - Executando query no CRM
+2026-01-14 16:53:13 [INFO] - Linhas retornadas: 10
+2026-01-14 16:53:13 [INFO] - Conexão CRM encerrada
+2026-01-14 16:53:13 [INFO] - Sanitizando dados
+2026-01-14 16:53:13 [INFO] - Preview dos dados (5 primeiras linhas):
+2026-01-14 16:53:13 [INFO] -                      DATA_INT    FORMA_PAGAMENTO SC_ID STATUS      ID           DATA_INICIO_PLANO                              NOME          CPF ATIVO                DATA_CRIACAO DIA_VENCIMENTO_BOLETO DATA_VENCIMENTO VALOR_MENSALIDADE STATUS_PAG
+0  2026-01-14 16:53:10.097000  Cartão de Crédito     3  Ativo  153440  2021-04-01 12:08:57.497000  SOLANGE TERESINHA COLARES ABBADE  54046530006  True         2022-05-12 00:00:00                     0      2026-01-01              0.78       PAGO
+1  2026-01-14 16:53:10.097000  Cartão de Crédito     3  Ativo  158957         2023-12-01 00:00:00                 DAGOBERTO DE MELO  14846373053  True         2022-05-12 00:00:00                    15      2026-01-01               0.7       PAGO
+2  2026-01-14 16:53:10.097000  Cartão de Crédito     3  Ativo  179771         2023-03-01 03:00:00           TANIA MARA GODOY PRESA   88119106091  True  2023-03-01 09:52:10.717000                    20      2026-01-01               0.7       PAGO
+3  2026-01-14 16:53:10.097000  Cartão de Crédito     3  Ativo  180598         2023-08-01 03:00:00           DANIELA RANGEL DE SOUZA  99880563034  True  2023-08-01 16:06:13.357000                    10      2026-01-01               0.7       PAGO
+4  2026-01-14 16:53:10.097000  Cartão de Crédito     3  Ativo  181165         2023-11-01 03:00:00        DAIANE BARTHOLOMEUS CAMPOS  94287872053  True  2023-10-27 11:18:49.577000                    20      2026-01-01               0.7       PAGO
+2026-01-14 16:53:13 [INFO] - Tipos VALOR_MENSALIDADE:
+2026-01-14 16:53:13 [INFO] - VALOR_MENSALIDADE
+<class 'float'>    10
+2026-01-14 16:53:13 [INFO] - Estatísticas VALOR_MENSALIDADE:
+2026-01-14 16:53:13 [INFO] - count     10.0
+unique     4.0
+top        0.7
+freq       5.0
+2026-01-14 16:53:13 [INFO] - Conectando ao DW
+2026-01-14 16:53:15 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-14 16:53:17 [INFO] - 10 linhas inseridas com sucesso
+2026-01-14 16:53:17 [INFO] - Conexão DW encerrada
+2026-01-14 16:53:17 [INFO] - Carga finalizada com sucesso
+2026-01-14 16:56:55 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-14 16:56:55 [INFO] - Conectando ao CRM
+2026-01-14 16:56:57 [INFO] - Executando query no CRM
+2026-01-14 16:56:58 [INFO] - Linhas retornadas: 10
+2026-01-14 16:56:58 [INFO] - Conexão CRM encerrada
+2026-01-14 16:56:58 [INFO] - Sanitizando dados
+2026-01-14 16:56:58 [INFO] - Preview dos dados (5 primeiras linhas):
+2026-01-14 16:56:58 [INFO] -                      DATA_INT    FORMA_PAGAMENTO SC_ID STATUS      ID           DATA_INICIO_PLANO                              NOME          CPF ATIVO                DATA_CRIACAO DIA_VENCIMENTO_BOLETO DATA_VENCIMENTO VALOR_MENSALIDADE STATUS_PAG
+0  2026-01-14 16:56:55.070000  Cartão de Crédito     3  Ativo  153440  2021-04-01 12:08:57.497000  SOLANGE TERESINHA COLARES ABBADE  54046530006  True         2022-05-12 00:00:00                     0      2026-01-01              77.9       PAGO
+1  2026-01-14 16:56:55.070000  Cartão de Crédito     3  Ativo  158957         2023-12-01 00:00:00                 DAGOBERTO DE MELO  14846373053  True         2022-05-12 00:00:00                    15      2026-01-01              69.9       PAGO
+2  2026-01-14 16:56:55.070000  Cartão de Crédito     3  Ativo  179771         2023-03-01 03:00:00           TANIA MARA GODOY PRESA   88119106091  True  2023-03-01 09:52:10.717000                    20      2026-01-01              69.9       PAGO
+3  2026-01-14 16:56:55.070000  Cartão de Crédito     3  Ativo  180598         2023-08-01 03:00:00           DANIELA RANGEL DE SOUZA  99880563034  True  2023-08-01 16:06:13.357000                    10      2026-01-01              69.9       PAGO
+4  2026-01-14 16:56:55.070000  Cartão de Crédito     3  Ativo  181165         2023-11-01 03:00:00        DAIANE BARTHOLOMEUS CAMPOS  94287872053  True  2023-10-27 11:18:49.577000                    20      2026-01-01              69.9       PAGO
+2026-01-14 16:56:58 [INFO] - Tipos VALOR_MENSALIDADE:
+2026-01-14 16:56:58 [INFO] - VALOR_MENSALIDADE
+<class 'float'>    10
+2026-01-14 16:56:58 [INFO] - Estatísticas VALOR_MENSALIDADE:
+2026-01-14 16:56:58 [INFO] - count     10.0
+unique     4.0
+top       69.9
+freq       5.0
+2026-01-14 16:56:58 [INFO] - Conectando ao DW
+2026-01-14 16:57:00 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-14 16:57:02 [INFO] - 10 linhas inseridas com sucesso
+2026-01-14 16:57:02 [INFO] - Conexão DW encerrada
+2026-01-14 16:57:02 [INFO] - Carga finalizada com sucesso
+2026-01-14 16:57:47 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-14 16:57:47 [INFO] - Conectando ao CRM
+2026-01-14 16:57:49 [INFO] - Executando query no CRM
+2026-01-14 16:57:50 [INFO] - Linhas retornadas: 1393
+2026-01-14 16:57:50 [INFO] - Conexão CRM encerrada
+2026-01-14 16:57:50 [INFO] - Sanitizando dados
+2026-01-14 16:57:50 [INFO] - Preview dos dados (5 primeiras linhas):
+2026-01-14 16:57:50 [INFO] -                      DATA_INT    FORMA_PAGAMENTO SC_ID STATUS      ID           DATA_INICIO_PLANO                              NOME          CPF ATIVO                DATA_CRIACAO DIA_VENCIMENTO_BOLETO DATA_VENCIMENTO VALOR_MENSALIDADE STATUS_PAG
+0  2026-01-14 16:57:46.540000  Cartão de Crédito     3  Ativo  153440  2021-04-01 12:08:57.497000  SOLANGE TERESINHA COLARES ABBADE  54046530006  True         2022-05-12 00:00:00                     0      2026-01-01              77.9       PAGO
+1  2026-01-14 16:57:46.540000  Cartão de Crédito     3  Ativo  158957         2023-12-01 00:00:00                 DAGOBERTO DE MELO  14846373053  True         2022-05-12 00:00:00                    15      2026-01-01              69.9       PAGO
+2  2026-01-14 16:57:46.540000  Cartão de Crédito     3  Ativo  179771         2023-03-01 03:00:00           TANIA MARA GODOY PRESA   88119106091  True  2023-03-01 09:52:10.717000                    20      2026-01-01              69.9       PAGO
+3  2026-01-14 16:57:46.540000  Cartão de Crédito     3  Ativo  180598         2023-08-01 03:00:00           DANIELA RANGEL DE SOUZA  99880563034  True  2023-08-01 16:06:13.357000                    10      2026-01-01              69.9       PAGO
+4  2026-01-14 16:57:46.540000  Cartão de Crédito     3  Ativo  181165         2023-11-01 03:00:00        DAIANE BARTHOLOMEUS CAMPOS  94287872053  True  2023-10-27 11:18:49.577000                    20      2026-01-01              69.9       PAGO
+2026-01-14 16:57:50 [INFO] - Tipos VALOR_MENSALIDADE:
+2026-01-14 16:57:50 [INFO] - VALOR_MENSALIDADE
+<class 'float'>    1393
+2026-01-14 16:57:50 [INFO] - Estatísticas VALOR_MENSALIDADE:
+2026-01-14 16:57:50 [INFO] - count     1393.0
+unique      30.0
+top         69.9
+freq       494.0
+2026-01-14 16:57:50 [INFO] - Conectando ao DW
+2026-01-14 16:57:52 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-14 17:02:25 [INFO] - 1393 linhas inseridas com sucesso
+2026-01-14 17:02:25 [INFO] - Conexão DW encerrada
+2026-01-14 17:02:25 [INFO] - Carga finalizada com sucesso
+2026-01-14 17:16:55 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-14 17:16:55 [INFO] - Conectando ao CRM
+2026-01-14 17:16:56 [INFO] - Executando query no CRM
+2026-01-14 17:16:58 [INFO] - Linhas retornadas: 1392
+2026-01-14 17:16:58 [INFO] - Conexão CRM encerrada
+2026-01-14 17:16:58 [INFO] - Sanitizando dados
+2026-01-14 17:16:58 [INFO] - Preview dos dados (5 primeiras linhas):
+2026-01-14 17:16:58 [INFO] -                      DATA_INT    FORMA_PAGAMENTO SC_ID STATUS      ID           DATA_INICIO_PLANO                              NOME          CPF ATIVO                DATA_CRIACAO DIA_VENCIMENTO_BOLETO DATA_VENCIMENTO VALOR_MENSALIDADE STATUS_PAG
+0  2026-01-14 17:16:54.250000  Cartão de Crédito     3  Ativo  153440  2021-04-01 12:08:57.497000  SOLANGE TERESINHA COLARES ABBADE  54046530006  True         2022-05-12 00:00:00                     0      2026-01-01              77.9       PAGO
+1  2026-01-14 17:16:54.250000  Cartão de Crédito     3  Ativo  158957         2023-12-01 00:00:00                 DAGOBERTO DE MELO  14846373053  True         2022-05-12 00:00:00                    15      2026-01-01              69.9       PAGO
+2  2026-01-14 17:16:54.250000  Cartão de Crédito     3  Ativo  179771         2023-03-01 03:00:00           TANIA MARA GODOY PRESA   88119106091  True  2023-03-01 09:52:10.717000                    20      2026-01-01              69.9       PAGO
+3  2026-01-14 17:16:54.250000  Cartão de Crédito     3  Ativo  180598         2023-08-01 03:00:00           DANIELA RANGEL DE SOUZA  99880563034  True  2023-08-01 16:06:13.357000                    10      2026-01-01              69.9       PAGO
+4  2026-01-14 17:16:54.250000  Cartão de Crédito     3  Ativo  181165         2023-11-01 03:00:00        DAIANE BARTHOLOMEUS CAMPOS  94287872053  True  2023-10-27 11:18:49.577000                    20      2026-01-01              69.9       PAGO
+2026-01-14 17:16:58 [INFO] - Tipos VALOR_MENSALIDADE:
+2026-01-14 17:16:58 [INFO] - VALOR_MENSALIDADE
+<class 'float'>    1392
+2026-01-14 17:16:58 [INFO] - Estatísticas VALOR_MENSALIDADE:
+2026-01-14 17:16:58 [INFO] - count     1392.0
+unique      30.0
+top         69.9
+freq       494.0
+2026-01-14 17:16:58 [INFO] - Conectando ao DW
+2026-01-14 17:17:00 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-14 17:21:24 [INFO] - 1392 linhas inseridas com sucesso
+2026-01-14 17:21:24 [INFO] - Conexão DW encerrada
+2026-01-14 17:21:24 [INFO] - Carga finalizada com sucesso

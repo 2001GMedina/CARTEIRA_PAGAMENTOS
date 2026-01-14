@@ -1,0 +1,2 @@
+DELETE
+FROM data_warehouse.CARTEIRA_PAGAMENTOS

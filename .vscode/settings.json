@@ -1,0 +1,22 @@
+{
+    "sqltools.connections": [
+        {
+            "connectionTimeout": 15,
+            "mssqlOptions": {
+                "appName": "SQLTools",
+                "useUTC": false,
+                "encrypt": false,
+                "trustServerCertificate": false
+            },
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "162.215.175.144",
+            "port": 1433,
+            "driver": "MSSQL",
+            "name": "ASBEVI_DB",
+            "database": "admin_dwasbevi",
+            "username": "asbevi_tech",
+            "password": "Atlas032025*"
+        }
+    ]
+}
