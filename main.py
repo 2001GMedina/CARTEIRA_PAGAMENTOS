@@ -28,6 +28,11 @@ def sanitize_dataframe(df: pd.DataFrame) -> pd.DataFrame:
             lambda x: int(x) if pd.notna(x) else None
         )
 
+#    if "QTD_FATURAS_ABERTO" in df.columns:
+ #       df["QTD_FATURAS_ABERTO"] = df["QTD_FATURAS_ABERTO"].apply(
+  #          lambda x: int(x) if pd.notna(x) else None
+   #     )
+
     # ================================
     # ATIVO -> BIT
     # ================================
