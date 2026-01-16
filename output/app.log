@@ -784,3 +784,29 @@ freq       5.0
 2026-01-15 12:40:30 [INFO] - 10 linhas inseridas com sucesso
 2026-01-15 12:40:30 [INFO] - Conexão DW encerrada
 2026-01-15 12:40:30 [INFO] - Carga finalizada com sucesso
+2026-01-16 11:18:00 [INFO] - Iniciando carga CARTEIRA_PAGAMENTOS
+2026-01-16 11:18:00 [INFO] - Conectando ao CRM
+2026-01-16 11:18:02 [INFO] - Executando query no CRM
+2026-01-16 11:18:04 [INFO] - Linhas retornadas: 1393
+2026-01-16 11:18:04 [INFO] - Conexão CRM encerrada
+2026-01-16 11:18:04 [INFO] - Sanitizando dados
+2026-01-16 11:18:04 [INFO] - Preview dos dados (5 primeiras linhas):
+2026-01-16 11:18:04 [INFO] -                      DATA_INT    FORMA_PAGAMENTO SC_ID STATUS      ID           DATA_INICIO_PLANO                              NOME          CPF ATIVO                DATA_CRIACAO DIA_VENCIMENTO_BOLETO DATA_VENCIMENTO VALOR_MENSALIDADE QTD_FATURAS_ABERTO VALOR_FINAL STATUS_PAG
+0  2026-01-16 11:18:03.080000  Cartão de Crédito     3  Ativo  153440  2021-04-01 12:08:57.497000  SOLANGE TERESINHA COLARES ABBADE  54046530006  True         2022-05-12 00:00:00                     0      2026-01-01              77.9               None        77.9       PAGO
+1  2026-01-16 11:18:03.080000  Cartão de Crédito     3  Ativo  158957         2023-12-01 00:00:00                 DAGOBERTO DE MELO  14846373053  True         2022-05-12 00:00:00                    15      2026-01-01              69.9               None        69.9       PAGO
+2  2026-01-16 11:18:03.080000  Cartão de Crédito     3  Ativo  179771         2023-03-01 03:00:00           TANIA MARA GODOY PRESA   88119106091  True  2023-03-01 09:52:10.717000                    20      2026-01-01              69.9               None        69.9       PAGO
+3  2026-01-16 11:18:03.080000  Cartão de Crédito     3  Ativo  180598         2023-08-01 03:00:00           DANIELA RANGEL DE SOUZA  99880563034  True  2023-08-01 16:06:13.357000                    10      2026-01-01              69.9               None        69.9       PAGO
+4  2026-01-16 11:18:03.080000  Cartão de Crédito     3  Ativo  181165         2023-11-01 03:00:00        DAIANE BARTHOLOMEUS CAMPOS  94287872053  True  2023-10-27 11:18:49.577000                    20      2026-01-01              69.9               None        69.9       PAGO
+2026-01-16 11:18:04 [INFO] - Tipos VALOR_MENSALIDADE:
+2026-01-16 11:18:04 [INFO] - VALOR_MENSALIDADE
+<class 'float'>    1393
+2026-01-16 11:18:04 [INFO] - Estatísticas VALOR_MENSALIDADE:
+2026-01-16 11:18:04 [INFO] - count     1393.0
+unique      30.0
+top         69.9
+freq       494.0
+2026-01-16 11:18:04 [INFO] - Conectando ao DW
+2026-01-16 11:18:06 [INFO] - Inserindo dados em data_warehouse.CARTEIRA_PAGAMENTOS
+2026-01-16 11:22:57 [INFO] - 1393 linhas inseridas com sucesso
+2026-01-16 11:22:57 [INFO] - Conexão DW encerrada
+2026-01-16 11:22:57 [INFO] - Carga finalizada com sucesso
